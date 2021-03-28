@@ -97,7 +97,7 @@ class ReflexAgent(Agent):
         """When food_distance and ghost_distance have the same weight, Pacman becomes very reluctant
         about the food that is actually near him. I wanted Pacman to move even if the ghost was a little close,
         because otherwise he takes no risks and eventually loses or wins in a long time. To realize this, I
-        increased the weight of the food_distance function. food_distance has weight 2 and ghost_distance 1."""
+        increased the weight of the food_distance function. food_distance has weight 10 and ghost_distance 1."""
         """If we do not take the score into account no evaluation value works well.
         The score is the main evaluation value and we use the other values for improvement."""
 
@@ -292,8 +292,8 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
                 pacman_action = action  # If the value has changed, this is the corresponding action
             if value > beta:
                 beta = float('inf')
-                """As the assignment pdf suggests, alpha changes for different nodes so
-                it should not be the same for the whole search. Therefore, I reset it to -inf."""
+                """As the assignment pdf suggests, beta changes for different nodes so
+                it should not be the same for the whole search. Therefore, I reset it to inf."""
                 return beta, pacman_action
                 # If the value is greater than the previously chosen max value, I can prune the other successors.
             alpha = max(alpha, value)
