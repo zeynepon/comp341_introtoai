@@ -30,7 +30,7 @@ def question3a():
     answerLivingReward = -1
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
-    # Negative living reward, so the agent looks to the nearest terminal state
+    # Negative living reward, so the agent looks for the nearest terminal state
     # Discount not too low, noise low so it risks the cliff
 
 def question3b():
@@ -39,7 +39,7 @@ def question3b():
     answerLivingReward = -1
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
-    # Negative living reward, so the agent looks to the nearest terminal state
+    # Negative living reward, so the agent looks for the nearest terminal state
     # Discount not too low, noise high so it avoids the cliff
 
 def question3c():
